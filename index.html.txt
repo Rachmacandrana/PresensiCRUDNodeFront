@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Presensi Siswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Presensi Siswa</h1>
+
+<form id="form">
+  <input type="text" id="nama" placeholder="Nama" required>
+  <input type="text" id="kelas" placeholder="Kelas" required>
+
+  <select id="status">
+    <option>Hadir</option>
+    <option>Izin</option>
+    <option>Sakit</option>
+    <option>Alpa</option>
+  </select>
+
+  <input type="date" id="tanggal" required>
+  <button type="submit">Tambah</button>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Kelas</th>
+      <th>Status</th>
+      <th>Tanggal</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+  <tbody id="data"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
