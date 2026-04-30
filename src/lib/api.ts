@@ -1,5 +1,23 @@
 const BASE_URL = import.meta.env.VITE_API_URL ?? "/api";
 
+// Origin server backend (tanpa /api di akhir) — dipakai untuk URL foto presensi
+// karena backend menyajikan file foto di /uploads/attendance/* (di luar /api).
+const SERVER_ORIGIN = BASE_URL.replace(/\/api\/?$/, "");
+
+/**
+ * Membentuk URL foto absolut dari path yang dikirim backend.
+ * Backend menyimpan path seperti "/uploads/attendance/checkin_xxx.png".
+ * Untuk kompatibilitas, kalau yang diterima sudah berupa data URL (legacy),
+ * dikembalikan apa adanya.
+ */
+export function photoUrl(path: string | null | undefined): string {
+  if (!path) return "";
+  if (path.startsWith("data:") || path.startsWith("http://") || path.startsWith("https://")) {
+    return path;
+  }
+  return `${SERVER_ORIGIN}${path.startsWith("/") ? "" : "/"}${path}`;
+}
+
 export interface AuthUser {
   id: number;
   username: string;

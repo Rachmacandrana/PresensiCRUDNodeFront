@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useListAttendance, useListEmployees } from "@/lib/hooks";
+import { photoUrl } from "@/lib/api";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -126,7 +127,7 @@ export default function AttendanceHistory() {
                       <div className="flex justify-center">
                         {record.checkInPhoto ? (
                           <div className="w-8 h-8 rounded border overflow-hidden">
-                            <img src={record.checkInPhoto} alt="Thumb" className="w-full h-full object-cover" />
+                            <img src={photoUrl(record.checkInPhoto)} alt="Thumb" className="w-full h-full object-cover" />
                           </div>
                         ) : (
                           <div className="w-8 h-8 rounded border bg-secondary flex items-center justify-center text-muted-foreground">
@@ -178,7 +179,7 @@ export default function AttendanceHistory() {
                     </p>
                     {selectedRecord.checkInPhoto && (
                       <div className="rounded-xl overflow-hidden border-2 border-border shadow-sm">
-                        <img src={selectedRecord.checkInPhoto} alt="Selfie Masuk" className="w-full object-cover" />
+                        <img src={photoUrl(selectedRecord.checkInPhoto)} alt="Selfie Masuk" className="w-full object-cover" />
                       </div>
                     )}
                   </div>
@@ -198,7 +199,7 @@ export default function AttendanceHistory() {
                     </p>
                     {selectedRecord.checkOutPhoto && (
                       <div className="rounded-xl overflow-hidden border-2 border-border shadow-sm">
-                        <img src={selectedRecord.checkOutPhoto} alt="Selfie Pulang" className="w-full object-cover" />
+                        <img src={photoUrl(selectedRecord.checkOutPhoto)} alt="Selfie Pulang" className="w-full object-cover" />
                       </div>
                     )}
                   </div>

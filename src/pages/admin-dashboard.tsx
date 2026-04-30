@@ -1,5 +1,6 @@
 import React from "react";
 import { useGetDashboardSummary, useGetRecentAttendance, useListAttendance } from "@/lib/hooks";
+import { photoUrl } from "@/lib/api";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, CheckCircle2, Clock, CalendarDays, BarChart3, Image as ImageIcon } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -112,11 +113,11 @@ export default function AdminDashboard() {
                         <Dialog>
                           <DialogTrigger asChild>
                             <div className="w-10 h-10 rounded-lg overflow-hidden border border-border cursor-pointer hover:ring-2 ring-primary/50 transition-all">
-                              <img src={record.checkInPhoto} alt="Selfie" className="w-full h-full object-cover" />
+                              <img src={photoUrl(record.checkInPhoto)} alt="Selfie" className="w-full h-full object-cover" />
                             </div>
                           </DialogTrigger>
                           <DialogContent className="sm:max-w-md bg-transparent border-none shadow-none">
-                            <img src={record.checkInPhoto} alt="Selfie Full" className="w-full h-auto rounded-xl border-4 border-white shadow-2xl" />
+                            <img src={photoUrl(record.checkInPhoto)} alt="Selfie Full" className="w-full h-auto rounded-xl border-4 border-white shadow-2xl" />
                           </DialogContent>
                         </Dialog>
                       )}

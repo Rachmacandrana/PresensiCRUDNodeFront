@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAuth } from "@/hooks/use-auth";
+import { photoUrl } from "@/lib/api";
 import { useLocation } from "wouter";
 import { format } from "date-fns";
 import { id as idLocale } from "date-fns/locale";
@@ -146,7 +147,7 @@ export default function Home() {
                 {hasCheckedIn ? (
                   <div className="flex items-center gap-4 bg-background p-4 rounded-xl border">
                     {todayAttendance.record?.checkInPhoto ? (
-                      <img src={todayAttendance.record.checkInPhoto} alt="Selfie" className="w-16 h-16 rounded-lg object-cover border" />
+                      <img src={photoUrl(todayAttendance.record.checkInPhoto)} alt="Selfie" className="w-16 h-16 rounded-lg object-cover border" />
                     ) : (
                       <div className="w-16 h-16 rounded-lg bg-secondary flex items-center justify-center">
                         <Clock className="w-6 h-6 text-muted-foreground" />
@@ -193,7 +194,7 @@ export default function Home() {
                 {hasCheckedOut ? (
                   <div className="flex items-center gap-4 bg-background p-4 rounded-xl border">
                     {todayAttendance.record?.checkOutPhoto ? (
-                      <img src={todayAttendance.record.checkOutPhoto} alt="Selfie" className="w-16 h-16 rounded-lg object-cover border" />
+                      <img src={photoUrl(todayAttendance.record.checkOutPhoto)} alt="Selfie" className="w-16 h-16 rounded-lg object-cover border" />
                     ) : (
                       <div className="w-16 h-16 rounded-lg bg-secondary flex items-center justify-center">
                         <Clock className="w-6 h-6 text-muted-foreground" />
