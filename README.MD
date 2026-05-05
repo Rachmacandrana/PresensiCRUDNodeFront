@@ -137,7 +137,7 @@ Backend menyajikan folder ini sebagai static files di `/uploads/...`, dan fronte
 - Foto selfie disimpan sebagai file di `backend/uploads/attendance/` (maksimal ±2MB per foto, format JPG/PNG/WebP).
 - Status presensi: `hadir`, `terlambat`, `izin`.
 
-Frontend (frontend/)
+## Frontend (frontend/)
 Kategori	            Teknologi
 Language	            TypeScript
 UI Framework	        React 18
@@ -153,7 +153,7 @@ Ikon	                Lucide React
 Animasi	              Framer Motion
 Static server (prod)	serve (untuk PM2)
 
-Backend (backend/)
+## Backend (backend/)
 Kategori	            Teknologi
 Runtime	              Node.js 20+
 Language	            TypeScript
