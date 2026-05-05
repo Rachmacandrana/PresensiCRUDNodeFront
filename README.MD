@@ -138,29 +138,34 @@ Backend menyajikan folder ini sebagai static files di `/uploads/...`, dan fronte
 - Status presensi: `hadir`, `terlambat`, `izin`.
 
 ## Frontend (frontend/)
-Kategori	            Teknologi
-Language	            TypeScript
-UI Framework	        React 18
-Build Tool	          Vite
-Styling	              Tailwind CSS v4
-Routing	              Wouter (router ringan pengganti React Router)
-State / Data fetching	TanStack Query (React Query v5)
-Komponen UI	          Radix UI + shadcn/ui (Accordion, Dialog, Select, dll)
-Form	                React Hook Form + Zod
-Grafik/chart	        Recharts
-Notifikasi	          Sonner (toast)
-Ikon	                Lucide React
-Animasi	              Framer Motion
-Static server (prod)	serve (untuk PM2)
+|Kategori	            |Teknologi                                              |
+| ------------------- | ----------------------------------------------------  |
+|Language	            |TypeScript                                             |
+|UI Framework	        |React 18                                               |
+|Build Tool	          |Vite                                                   |
+|Styling	            |Tailwind CSS v4                                        |
+|Routing	            |Wouter (router ringan pengganti React Router)          |
+|State / Data fetching|TanStack Query (React Query v5)                        |
+|Komponen UI	        |Radix UI + shadcn/ui (Accordion, Dialog, Select, dll)  |
+|Form	                |React Hook Form + Zod                                  |
+|Grafik/chart	        |Recharts                                               |
+|Notifikasi	          |Sonner (toast)                                         |
+|Ikon	                |Lucide React                                           |
+|Animasi	            |Framer Motion                                          |
+|Static server (prod)	|serve (untuk PM2)                                      |
 
 ## Backend (backend/)
-Kategori	            Teknologi
-Runtime	              Node.js 20+
-Language	            TypeScript
-Web Framework	        Express.js v5
-Database	            MySQL (via driver mysql2)
-Auth	                Session berbasis cookie (bcryptjs untuk hash password)
-Validasi input	      Zod
-Penyimpanan foto	    File lokal (uploads/attendance/)
-Dev runner	          tsx (jalankan TS langsung tanpa build)
-Prod runner	          Node.js (setelah npm run build → dist/)
+|Kategori	            |Teknologi                                              |
+| ------------------- | ------------------------------------------------------|
+|Runtime	            |Node.js 20+                                            |
+|Language	            |TypeScript                                             |
+|Web Framework	      |Express.js v5                                          |
+|Database	            |MySQL (via driver mysql2)                              |
+|Auth	                |Session berbasis cookie (bcryptjs untuk hash password) |
+|Validasi input	      |Zod                                                    |
+|Penyimpanan foto	    |File lokal (uploads/attendance/)                       |
+|Dev runner	          |tsx (jalankan TS langsung tanpa build)                 |
+|Prod runner	        |Node.js (setelah npm run build → dist/)                |
+
+
+
